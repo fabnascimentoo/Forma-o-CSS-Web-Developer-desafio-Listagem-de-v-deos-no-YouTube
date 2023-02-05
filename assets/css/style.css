@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body *{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 200px repeat(3, 1fr);
+    grid-template-rows: 70px 100%;
+    grid-template-areas: "header header header header" "sidebar main main main";
+    min-height: 100vh;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+aside {
+    grid-area: sidebar;
+    padding-left: 16px;
+}
+
+.menu-itens{
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.menu-itens .icone h3{
+    margin-left: 8px;
+}
+.menu-itens .icone{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.container .pesquisa{
+        width: 404px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+}
+.container .pesquisa input{
+    box-sizing: border-box;
+    width: 348px;
+    height: 30px;
+    left: 526px;
+    top: 8px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+}
+
+.container .pesquisa i{
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    height: 30px;
+    width: 40px;
+    padding-left:12px ;
+}
+.menu{
+    width: 146px;
+    height: 24px;
+    display: flex;
+    gap: 32px;
+    padding-left: 20px;
+}
+
+.itens-direita{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    gap: 24px;
+    width: 130px;
+    height: 34px;
+}
+
+main{
+    grid-area: main;
+}
+
+.display-videos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.display-videos .video{
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+
+.video .info{
+    display: flex;
+}
+
+.video .info h4,
+.video .info p{
+    margin:0px;
+    padding-left: 8px;
+}
+
+.video .info .dados .views{
+    display: flex;
+    margin: 8px 0;
+}
+
+.display-videos .video .miniatura img{
+    width: 100%
+}
